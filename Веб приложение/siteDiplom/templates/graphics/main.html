@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+    Метеостанция
+{% endblock %}
+{% block style %}
+    <style>
+        .wrap {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="wrap">
+            <div class="content">
+                {% if danger %}
+                    <div class="alert alert-danger" role="alert">
+                        Показания метеоданных не соответствуют норме
+                    </div>
+                {% endif %}
+                <h3 class="text-left"><i>Текущее время:</i> <br>{% now "H:i D d M Y" %}</h3>
+                <h3 class="text-left"><i>Последние показания:</i></h3>
+                <h3 class="text-left">Температура: {{ data.temperature }} °C</h3>
+                <h3 class="text-left">Давление: {{ data.pression }} мм.рт.ст.</h3>
+                <h3 class="text-left">Влажность: {{ data.humidity }} %</h3>
+                <a href="show/" class="btn btn-primary text-center d-block"> Просмотр графиков</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

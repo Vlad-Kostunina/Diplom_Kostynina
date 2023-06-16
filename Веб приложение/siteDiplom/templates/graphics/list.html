@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    Графики
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class=""><a href="http://127.0.0.1:8000/" class="btn btn-primary">Вернуться на главную</a></div>
+            </div>
+            <div class="col-md-12">
+                <img class="card-img-top" src="http://127.0.0.1:8000/siteDiplom/apps/graphics/media/graphics.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center"><a href="http://127.0.0.1:8000/show/?time=60" class="btn btn-success">Показания за час</a></div>
+            <div class="col-md-4 d-flex justify-content-center"><a href="http://127.0.0.1:8000/show/?time=1440" class="btn btn-success">Показания за день</a></div>
+            <div class="col-md-4 d-flex justify-content-center"><a href="http://127.0.0.1:8000/show/?time=10080" class="btn btn-success">Показания за неделю</a></div>
+        </div>
+    </div>
+{% endblock %}
+
